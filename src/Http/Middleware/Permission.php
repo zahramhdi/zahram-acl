@@ -23,6 +23,9 @@ class Permission
 
         if (auth()->user()) {
             $user = User::where('id', auth()->user()->id)->with(['roles.permissions'])->first();
+
+            if (collect($user->roles)->where('name','super_admin')->count())  return $next($request);
+
             foreach ($user->roles as $role) {
                 $permissions = $role->permissions;
 // get requested action

@@ -70,7 +70,50 @@
  *     },
  * )
  */
-
+/**
+ * @OA\Post(
+ *      path="/api/acl/user/get-role",
+ *      tags={"User"},
+ *      summary="get user roles",
+ *      description="",
+ *       @OA\RequestBody(
+ *         required=true,
+ *         @OA\JsonContent(ref="#/components/schemas/GetUserRoleRequestBody")
+ *     ),
+ *     @OA\Response(response=200, description="Successful", @OA\JsonContent()),
+ *     @OA\Response(response=204, description="Successful"),
+ *     @OA\Response(response=400, description="Bad request"),
+ *     @OA\Response(response=404, description="Not Found"),
+ *     @OA\Response(response=401, description="Unauthenticated", @OA\JsonContent()),
+ *         security={
+ *         {
+ *             "bearerAuth": {}
+ *         }
+ *     },
+ * )
+ */
+/**
+ * @OA\Post(
+ *      path="/api/acl/user/add-role",
+ *      tags={"User"},
+ *      summary="add new role to user",
+ *      description="",
+ *       @OA\RequestBody(
+ *         required=true,
+ *         @OA\JsonContent(ref="#/components/schemas/AddUserRoleRequestBody")
+ *     ),
+ *     @OA\Response(response=200, description="Successful", @OA\JsonContent()),
+ *     @OA\Response(response=204, description="Successful"),
+ *     @OA\Response(response=400, description="Bad request"),
+ *     @OA\Response(response=404, description="Not Found"),
+ *     @OA\Response(response=401, description="Unauthenticated", @OA\JsonContent()),
+ *         security={
+ *         {
+ *             "bearerAuth": {}
+ *         }
+ *     },
+ * )
+ */
 
 
 /**

@@ -12,6 +12,8 @@ if (\thirdly\acl\Facades\Acl::need_auth()) {
     Route::middleware(['auth:api','has-permission'])->group(function () {
 
         Route::get('user/logout', [\thirdly\acl\Http\Controllers\AuthController::class, 'logOut']);
+        Route::post('user/get-role', [\thirdly\acl\Http\Controllers\UserController::class, 'getRole']);
+        Route::post('user/add-role', [\thirdly\acl\Http\Controllers\UserController::class, 'addRole']);
 
         Route::group(['prefix' => '/roles'], function () {
             $controller = \thirdly\acl\Http\Controllers\RoleController::class;
