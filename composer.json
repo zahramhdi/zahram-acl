@@ -1,0 +1,35 @@
+{
+    "name": "thirdly-zaram/acl",
+    "description": "An acl package for laravel framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zahra mohamadi",
+            "email": "zahra.mohamadi.1372@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/passport": "^10.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.13",
+        "mockery/mockery": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "thirdly\\acl\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "thirdly\\acl\\AclBaseServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
