@@ -1,5 +1,5 @@
 {
-    "name": "thirdly-zaram/acl",
+    "name": "zahramhdi/zahram-acl",
     "description": "An acl package for laravel framework",
     "license": "MIT",
     "authors": [
@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "laravel/passport": "^10.1"
+        "laravel/passport": "^9.0.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.13",
